@@ -1,11 +1,10 @@
-import React from "react";
+import HeaderBreadcrumb from "@/components/admin/header-breadcrumb";
 
-function AdminDashboard() {
+export default async function Page() {
   return (
     <div>
-      <h1>AdminDashboard</h1>
+      <HeaderBreadcrumb title="Dashboard" href="/admin" />
+      <h1>Page dashboard</h1>
     </div>
   );
 }
-
-export default AdminDashboard;

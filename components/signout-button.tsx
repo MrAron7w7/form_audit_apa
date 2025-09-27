@@ -1,15 +1,25 @@
-import { signOut } from "@/lib/auth";
+"use client";
 
-export default function SignOut() {
-  const signOutAll = async () => {
-    "use server";
+import { signOutAction } from "@/actions/auth/signout.action";
+import { LogOut } from "lucide-react";
 
-    console.log("Signing out...");
-    await signOut();
+export default function SignOutSession() {
+  const handleSignOut = async () => {
+    try {
+      await signOutAction();
+    } catch (error) {
+      console.error("Error signing out:", error);
+    }
   };
+
   return (
-    <form action={signOutAll}>
-      <button type="submit">Sign Out</button>
-    </form>
+    <button
+      type="button"
+      onClick={handleSignOut}
+      className="w-full text-left flex items-center gap-2"
+    >
+      <LogOut className="w-4 h-4" />
+      Salir de sesión
+    </button>
   );
 }

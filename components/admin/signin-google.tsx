@@ -1,14 +1,20 @@
-import { auth } from "@/lib/auth";
-import { Button } from "./ui/button";
-import signinWithGoogle from "@/actions/auth/siginwithgoogle.action";
+import { auth, signIn } from "@/lib/auth";
+import { Button } from "../ui/button";
+// import { Button } from "./ui/button";
 
 export default async function SignInGoogle() {
   const session = await auth();
 
   const user = session?.user;
 
+  const signGoogle = async () => {
+    "use server";
+
+    console.log("Signing in with Google...");
+    await signIn("google", { redirectTo: "/dashboard" });
+  };
   return (
-    <form action={signinWithGoogle}>
+    <form action={signGoogle}>
       <Button variant="outline" className="w-full" type="submit">
         <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24">
           <path

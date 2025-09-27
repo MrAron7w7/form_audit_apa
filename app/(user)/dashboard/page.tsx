@@ -13,13 +13,12 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import { auth } from "@/lib/auth";
 
 export default async function Page() {
-  const session = await auth();
+  // const session = await auth();
 
-  console.log("ROLE", session?.user.role);
-  console.log("Nombre", session?.user.name);
+  // console.log("ROLE", session?.user.role);
+  // console.log("Nombre dashboard user =>", session?.user.name);
   return (
     <SidebarProvider>
       <AppSidebar />

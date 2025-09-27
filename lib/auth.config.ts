@@ -10,6 +10,7 @@ export default {
     Google({
       clientId: process.env.AUTH_GOOGLE_ID!,
       clientSecret: process.env.AUTH_GOOGLE_SECRET!,
+      allowDangerousEmailAccountLinking: true, // Importante para linking
     }),
     Credentials({
       credentials: {
@@ -38,6 +39,7 @@ export default {
                 id: user.id,
                 name: user.name,
                 email: user.email,
+                role: user.role || 'USER',
         }
         }
       },

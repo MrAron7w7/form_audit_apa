@@ -9,7 +9,6 @@ import {
 
 import SignInGoogle from "@/components/signin-google";
 import SignInForm from "@/components/auth/sign-in-form";
-import SignOut from "@/components/signout-button";
 
 function SignIn() {
   return (
@@ -25,7 +24,6 @@ function SignIn() {
         </CardHeader>
         <CardContent className="space-y-4">
           <SignInGoogle />
-          <SignOut />
 
           <SignInForm />
         </CardContent>

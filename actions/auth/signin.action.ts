@@ -49,7 +49,7 @@ export async function signInAction(
     existingUser.password as string
   );
 
-  console.log({ passwordMatch });
+  // console.log({ passwordMatch });
 
   if (!passwordMatch) {
     return {
