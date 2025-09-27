@@ -21,8 +21,6 @@ import {
   BarChart3,
   Lightbulb,
   CheckCircle,
-  Clock,
-  Award,
   Users,
   BookOpen,
   Search,
@@ -67,12 +65,6 @@ export default function Home() {
                 className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
               >
                 Precios
-              </Link>
-              <Link
-                href="#faq"
-                className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
-              >
-                FAQ
               </Link>
             </div>
 
@@ -380,7 +372,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 px-6">
+      {/* <section className="py-24 px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-6 mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800">
@@ -490,7 +482,7 @@ export default function Home() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-24 bg-slate-800 px-6">
@@ -516,8 +508,7 @@ export default function Home() {
               <Link href="/sign-in">
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="border-slate-400 text-slate-300 hover:bg-slate-700 hover:text-white px-8 py-4 text-lg font-semibold"
+                  className="bg-white text-primary hover:bg-slate-100 px-8 py-4 text-lg font-semibold"
                 >
                   Iniciar Sesión
                 </Button>
@@ -529,16 +520,317 @@ export default function Home() {
                 <CheckCircle className="h-5 w-5 text-emerald-400" />
                 <span className="text-sm">Sin tarjeta de crédito</span>
               </div>
-              <div className="flex items-center space-x-2">
+              {/* <div className="flex items-center space-x-2">
                 <CheckCircle className="h-5 w-5 text-emerald-400" />
                 <span className="text-sm">
                   Cancelación en cualquier momento
                 </span>
-              </div>
+              </div> */}
               <div className="flex items-center space-x-2">
                 <CheckCircle className="h-5 w-5 text-emerald-400" />
                 <span className="text-sm">Soporte 24/7</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-24 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center space-y-6 mb-20">
+            <div className="inline-flex items-center space-x-2 bg-amber-50 border border-amber-200 px-4 py-2 rounded-full text-sm font-medium text-amber-700">
+              <Star className="h-4 w-4" />
+              <span>Precio especial de lanzamiento BETA</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800">
+              Precios simples y transparentes
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Acceso completo a todas las funcionalidades por un precio
+              increíble durante la fase BETA
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Free Plan */}
+              <Card className="bg-white border-slate-200 shadow-lg relative">
+                <CardHeader className="pb-8 pt-8">
+                  <div className="space-y-2">
+                    <CardTitle className="text-2xl font-bold text-slate-800">
+                      Gratuito
+                    </CardTitle>
+                    <CardDescription className="text-slate-600">
+                      Para probar nuestras funcionalidades básicas
+                    </CardDescription>
+                  </div>
+                  <div className="space-y-2 pt-4">
+                    <div className="text-4xl font-bold text-slate-800">
+                      S/ 0
+                    </div>
+                    <div className="text-sm text-slate-500">Por siempre</div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <ul className="space-y-4">
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        2 documentos por mes
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        Análisis básico APA
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        Hasta 10 páginas por documento
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">Reporte en PDF</span>
+                    </li>
+                  </ul>
+                  <Link href="/sign-up" className="block">
+                    <Button
+                      variant="outline"
+                      className="w-full border-slate-300 text-slate-700 hover:bg-slate-50"
+                    >
+                      Comenzar Gratis
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+
+              {/* Beta Plan - Featured */}
+              <Card className="bg-white border-blue-200 shadow-xl relative transform scale-105">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                    Más Popular
+                  </div>
+                </div>
+                <CardHeader className="pb-8 pt-12">
+                  <div className="space-y-2">
+                    <CardTitle className="text-2xl font-bold text-slate-800">
+                      BETA Completo
+                    </CardTitle>
+                    <CardDescription className="text-slate-600">
+                      Acceso completo durante la fase BETA
+                    </CardDescription>
+                  </div>
+                  <div className="space-y-2 pt-4">
+                    <div className="flex items-baseline space-x-2">
+                      <div className="text-4xl font-bold text-blue-600">
+                        S/ 20
+                      </div>
+                      <div className="text-lg text-slate-400 line-through">
+                        S/ 49
+                      </div>
+                    </div>
+                    <div className="text-sm text-slate-500">
+                      Por mes (precio BETA)
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <div className="flex items-center space-x-2 text-blue-700 font-medium text-sm">
+                      <Lightbulb className="h-4 w-4" />
+                      <span>Ahorra S/ 29 mensualmente durante BETA</span>
+                    </div>
+                  </div>
+                  <ul className="space-y-4">
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        <strong>Documentos ilimitados</strong>
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        Análisis completo APA, MLA, Vancouver
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        Hasta 100 páginas por documento
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        Reportes detallados con sugerencias
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        Soporte prioritario 24/7
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        API para integraciones
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        Colaboración en equipo
+                      </span>
+                    </li>
+                  </ul>
+                  <Link href="/sign-up" className="block">
+                    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3">
+                      Comenzar BETA - S/ 20/mes
+                      <ArrowRight className="h-4 w-4 ml-2" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+
+              {/* Enterprise Plan */}
+              <Card className="bg-white border-slate-200 shadow-lg relative">
+                <CardHeader className="pb-8 pt-8">
+                  <div className="space-y-2">
+                    <CardTitle className="text-2xl font-bold text-slate-800">
+                      Institucional
+                    </CardTitle>
+                    <CardDescription className="text-slate-600">
+                      Para universidades y organizaciones grandes
+                    </CardDescription>
+                  </div>
+                  <div className="space-y-2 pt-4">
+                    <div className="text-4xl font-bold text-slate-800">
+                      Personalizado
+                    </div>
+                    <div className="text-sm text-slate-500">
+                      Contactar para cotización
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <ul className="space-y-4">
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        Todo en BETA Completo
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        Usuarios ilimitados
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">Integración SSO</span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        Personalización de marca
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        Métricas y analytics avanzados
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-slate-600">
+                        Gerente de cuenta dedicado
+                      </span>
+                    </li>
+                  </ul>
+                  <Link href="/contact" className="block">
+                    <Button
+                      variant="outline"
+                      className="w-full border-slate-300 text-slate-700 hover:bg-slate-50"
+                    >
+                      Contactar Ventas
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* FAQ Pricing */}
+          <div className="mt-20 max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                Preguntas frecuentes sobre precios
+              </h3>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-4">
+                <h4 className="font-semibold text-slate-800">
+                  ¿Por qué es tan barato el plan BETA?
+                </h4>
+                <p className="text-slate-600">
+                  Durante la fase BETA ofrecemos acceso completo a precio
+                  reducido para obtener feedback valioso de nuestros usuarios y
+                  perfeccionar la plataforma.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-slate-800">
+                  ¿Cuándo termina el precio BETA?
+                </h4>
+                <p className="text-slate-600">
+                  El precio BETA estará disponible hasta marzo 2025. Los
+                  usuarios BETA mantendrán un descuento especial cuando lancemos
+                  el precio regular.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-slate-800">
+                  ¿Puedo cancelar en cualquier momento?
+                </h4>
+                <p className="text-slate-600">
+                  Sí, puedes cancelar tu suscripción en cualquier momento desde
+                  tu panel de usuario. No hay contratos ni penalidades por
+                  cancelación.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-slate-800">
+                  ¿Ofrecen descuentos para estudiantes?
+                </h4>
+                <p className="text-slate-600">
+                  El precio BETA ya incluye un descuento significativo. Para
+                  descuentos adicionales institucionales, contáctanos
+                  directamente.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Money back guarantee */}
+          <div className="mt-16 text-center">
+            <div className="inline-flex items-center space-x-2 bg-emerald-50 border border-emerald-200 px-6 py-3 rounded-full">
+              <Shield className="h-5 w-5 text-emerald-600" />
+              <span className="text-emerald-700 font-medium">
+                Garantía de satisfacción de 30 días o te devolvemos tu dinero
+              </span>
             </div>
           </div>
         </div>
@@ -674,7 +966,7 @@ export default function Home() {
                 &copy; {new Date().getFullYear()} AcaCheck. Todos los derechos
                 reservados.
               </p>
-              <div className="flex items-center space-x-8 text-slate-500">
+              {/* <div className="flex items-center space-x-8 text-slate-500">
                 <Link
                   href="#"
                   className="hover:text-blue-600 transition-colors"
@@ -693,7 +985,7 @@ export default function Home() {
                 >
                   Cookies
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
